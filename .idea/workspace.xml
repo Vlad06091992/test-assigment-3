@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809756c6-c059-446c-aae8-92f396d69e87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/privatePage/PrivatePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/login/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/create-app-async-thunk.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/Counter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/login/authAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/counter/counterSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/login/authSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,17 +43,24 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/test-assigment-3/src/utils&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Admin\\Desktop\\test-assigment 3\\test-assigment\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Admin\\Desktop\\test-assigment-3\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\test-assigment-3\src\utils" />
+      <recent name="C:\Users\Admin\Desktop\test-assigment-3\src\features\login" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\test-assigment-3\src\features\login" />
+      <recent name="C:\Users\Admin\Desktop\test-assigment-3\src\features" />
       <recent name="C:\Users\Admin\Desktop\test-assigment 3\test-assigment\src\components\app" />
     </key>
   </component>
@@ -57,7 +76,9 @@
       <workItem from="1689479843099" duration="87000" />
       <workItem from="1689480027301" duration="1626000" />
       <workItem from="1689481739695" duration="774000" />
-      <workItem from="1689482540031" duration="1160000" />
+      <workItem from="1689482540031" duration="2102000" />
+      <workItem from="1689485825905" duration="2613000" />
+      <workItem from="1689488588007" duration="7108000" />
     </task>
     <servers />
   </component>
@@ -74,5 +95,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/axios/index.d.cts</url>
+          <line>75</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
