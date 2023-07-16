@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import 'antd/dist/antd.css';
 import {Button, Checkbox, Form, Input} from 'antd';
-import {useAppDispatch, useAppSelector} from "../../../src/app/hooks";
-import {login} from "../../../src/features/login/authSlice";
-import {LoginParamsType} from "../../../src/features/login/authAPI";
+import {useAppDispatch, useAppSelector} from "app/hooks";
+import {login} from "features/login/authSlice";
+import {LoginParamsType} from "features/login/authAPI";
 import {useNavigate} from "react-router-dom";
 import styles from "./Login.module.css"
 
@@ -19,7 +19,6 @@ export const Login = () => {
     }
 
     const onFinishFailed = (errorInfo: any) => {
-        debugger
         console.log('Failed:', errorInfo)
     }
 

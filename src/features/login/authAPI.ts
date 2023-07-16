@@ -1,5 +1,5 @@
 import axios from "axios";
-import {store} from "../../../src/app/store";
+import {store} from "app/store";
 
 
 export const instance = axios.create({
@@ -8,9 +8,7 @@ export const instance = axios.create({
 
 instance.interceptors.request.use(async (cnf) => {
     const token = await store.getState().auth.token
-    debugger
     if (token) {
-        debugger
         cnf.headers.Authorization = `Bearer ${token}`
     }
     return cnf

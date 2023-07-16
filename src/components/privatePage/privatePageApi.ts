@@ -1,4 +1,4 @@
-import {instance} from "../../../src/features/login/authAPI";
+import {instance} from "features/login/authAPI";
 
 
 export const privatePageAPI = {

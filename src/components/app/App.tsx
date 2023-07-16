@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import {Login} from "../../../src/features/login/Login";
-import {PrivatePage} from "../../../src/components/privatePage/PrivatePage";
+import {Login} from "features/login/Login";
+import {PrivatePage} from "components/privatePage/PrivatePage";
 import {createHashRouter, RouterProvider} from "react-router-dom";
 
 const router = createHashRouter([

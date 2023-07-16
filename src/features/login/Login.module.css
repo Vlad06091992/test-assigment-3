@@ -6,6 +6,8 @@
 }
 
 .error {
+    position: relative;
+    left: 20px;
     color: red;
     text-align: center;
     margin: 10px auto;

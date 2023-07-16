@@ -1,6 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {createAppAsyncThunk} from "../../../src/utils/create-app-async-thunk";
-import {privatePageAPI} from "../../../src/components/privatePage/privatePageApi";
+import {createAppAsyncThunk} from "utils/create-app-async-thunk";
+import {privatePageAPI} from "components/privatePage/privatePageApi";
+import {logout, setAppError} from "features/login/authSlice";
 
 
 export interface StateType {
@@ -26,15 +27,17 @@ export const slice = createSlice({
         builder.addCase(getFirstProduct.fulfilled, (state, action) => {
             return action.payload
         })
+        builder.addCase(logout,(state, action)=>{
+            return initialState
+        })
     }
 });
 
-export const getFirstProduct = createAppAsyncThunk<any, void>('prvPage/getFirstProd',
+export const getFirstProduct = createAppAsyncThunk<StateType, void>('prvPage/getFirstProd',
     async (arg, thunkAPI) => {
         const {dispatch, rejectWithValue} = thunkAPI
         try {
             let res: any = await privatePageAPI.getProduct()
-            debugger
             return {
                 id: res.data.id,
                 title: res.data.title,
@@ -42,7 +45,8 @@ export const getFirstProduct = createAppAsyncThunk<any, void>('prvPage/getFirstP
                 image: res.data.images[0]
             }
         } catch (e: any) {
-            debugger
+            dispatch(setAppError(e.message))
+            return rejectWithValue(null)
         }
     })
 

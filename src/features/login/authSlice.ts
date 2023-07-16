@@ -1,16 +1,16 @@
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {createAppAsyncThunk} from "../../../src/utils/create-app-async-thunk";
-import {authAPI, instance, LoginParamsType} from "../../../src/features/login/authAPI";
+import {createAppAsyncThunk} from "utils/create-app-async-thunk";
+import {authAPI, instance, LoginParamsType} from "features/login/authAPI";
 
 
-export interface CounterState {
+export interface StateType {
     isLoggedIn: boolean
     status: 'idle' | 'loading' | 'failed';
     error: string | null
     token: string | null
 }
 
-const initialState: CounterState = {
+const initialState: StateType = {
     isLoggedIn: false,
     status: 'idle',
     error: null,
@@ -25,8 +25,8 @@ export const slice = createSlice({
         setAppError(state, action: PayloadAction<{ error: string | null }>) {
             state.error = action.payload.error
         },
-        logout(state) {
-            state.isLoggedIn = false
+        logout() {
+            return initialState
         },
     },
     extraReducers: (builder) => {
@@ -37,7 +37,7 @@ export const slice = createSlice({
     }
 });
 
-export const login = createAppAsyncThunk<any, LoginParamsType>('auth/login',
+export const login = createAppAsyncThunk<LoginReturnType, LoginParamsType>('auth/login',
     async (arg, thunkAPI) => {
         const {dispatch, rejectWithValue} = thunkAPI
         try {
@@ -45,12 +45,14 @@ export const login = createAppAsyncThunk<any, LoginParamsType>('auth/login',
             return {isLoggedIn: true, token: res.data.token}
         } catch (e: any) {
             dispatch(setAppError({error: e.message}))
-            rejectWithValue(null)
-            return {isLoggedIn: false, token: null}
+            return rejectWithValue(null)
         }
     })
 
-
+type LoginReturnType = {
+    isLoggedIn:boolean
+    token: null|string
+}
 
 export const {setAppError,logout} = slice.actions
 export const authReducer = slice.reducer;
