@@ -1,0 +1,18 @@
+.loginDiv {
+    text-align: center;
+    border: 1px gray;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.testingInfo {
+    margin: 100px auto 0;
+    width: 400px;
+
+}

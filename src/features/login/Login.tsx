@@ -5,16 +5,16 @@ import {useAppDispatch, useAppSelector} from "../../../src/app/hooks";
 import {login} from "../../../src/features/login/authSlice";
 import {LoginParamsType} from "../../../src/features/login/authAPI";
 import {useNavigate} from "react-router-dom";
+import styles from "./Login.module.css"
 
 
 export const Login = () => {
     const navigate = useNavigate();
-    const errors = useAppSelector(state => state.auth.error)
-    const isLggedIn = useAppSelector(state => state.auth.isLoggedIn)
+    const error = useAppSelector(state => state.auth.error)
+    const isLoggedIn = useAppSelector(state => state.auth.isLoggedIn)
 
     const dispatch = useAppDispatch()
     const onFinish = (values: LoginParamsType) => {
-        debugger
         dispatch(login(values))
     }
 
@@ -23,23 +23,14 @@ export const Login = () => {
         console.log('Failed:', errorInfo)
     }
 
-    useEffect(()=>{
-        if(isLggedIn){
+    useEffect(() => {
+        if (isLoggedIn) {
             navigate('/private-page');
         }
-    },[isLggedIn])
+    }, [isLoggedIn])
 
 
-
-    return <div>
-
-
-        hbingley1
-
-        CQutx25i8r
-
-
-        {/*    return (*/}
+    return <div className={styles.loginDiv}>
         <Form
             name="basic"
             labelCol={{span: 8}}
@@ -66,7 +57,7 @@ export const Login = () => {
                 <Input.Password/>
 
             </Form.Item>
-            { errors && <div>errorssss</div> }
+            {error && <div className={styles.error}>Please enter correct password and username</div>}
 
             <Form.Item name="remember" valuePropName="checked" wrapperCol={{offset: 8, span: 16}}>
                 <Checkbox>Remember me</Checkbox>
@@ -78,5 +69,10 @@ export const Login = () => {
                 </Button>
             </Form.Item>
         </Form>
+        <div className={styles.testingInfo}>
+            <div>for testing:</div>
+            <div>username: hbingley1</div>
+            <div>password: CQutx25i8r</div>
+        </div>
     </div>
 }

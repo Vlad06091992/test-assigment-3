@@ -1,9 +1,11 @@
 import {Action, configureStore, ThunkAction} from '@reduxjs/toolkit';
 import {authReducer} from "../../src/features/login/authSlice";
+import {privatePageReducer} from "../../src/components/privatePage/privatePageSlice";
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer
+    auth: authReducer,
+    privatePage:privatePageReducer
   },
 });
 
